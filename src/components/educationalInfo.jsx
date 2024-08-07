@@ -7,6 +7,7 @@ const EducationalInfo = ({ educationalData, visibility, onClose }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     educationalData(formdata);
+    onClose();
   };
 
   const handleChange = (event) => {
@@ -164,8 +165,11 @@ const EducationalInfo = ({ educationalData, visibility, onClose }) => {
             />
           </section>
         </div>
-        <button type='submit'>Submit</button>
-        <button type='reset' onClick={onClose}>Close</button>
+        <div>
+          <button type='submit'>Submit</button>
+          <button type='reset' onClick={onClose}>Close</button>
+        </div>
+
       </form>
     </div>
   );

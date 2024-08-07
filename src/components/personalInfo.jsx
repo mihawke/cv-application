@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/personalInfo.styles.css'
 
-const PersonalInfo = ({ onUpdate, visibility , onClose }) => {
+const PersonalInfo = ({ onUpdate, visibility , onClose ,data }) => {
     const [formdata, setFormData] = useState({})
 
     const onSubmit = (event) => {
@@ -22,13 +22,13 @@ const PersonalInfo = ({ onUpdate, visibility , onClose }) => {
             <form onSubmit={onSubmit}>
                 <section>
                     <label htmlFor='first_name'>First Name:</label>
-                    <input name='firstName' id='first_name' type='text' placeholder='John' onChange={handleChange}></input>
+                    <input name='firstName' id='first_name' type='text' placeholder='John' value={data.firstName || ''} onChange={handleChange}></input>
                     <label htmlFor='last_name'>Last Name:</label>
-                    <input name='lastName' id='last_name' type='text' placeholder='Doe' onChange={handleChange}></input>
+                    <input name='lastName' id='last_name' type='text' placeholder='Doe' value={data.lastName || ''} onChange={handleChange}></input>
                     <label htmlFor='email'>Email:</label>
-                    <input name='email' id='email' type='email' placeholder='JohnDoe@gmail.com' onChange={handleChange}></input>
+                    <input name='email' id='email' type='email' placeholder='JohnDoe@gmail.com'  value={data.email || ''} onChange={handleChange}></input>
                     <label htmlFor='phone'>Phone:</label>
-                    <input name='phone' id='phone' type='tel' placeholder='9112325639' onChange={handleChange}></input>
+                    <input name='phone' id='phone' type='tel' placeholder='9112325639' value={data.phone || ''} onChange={handleChange}></input>
                 </section>
                 <div>
                     <button type='submit'>Submit</button>

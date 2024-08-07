@@ -5,6 +5,7 @@ form {
     align-items: center;
     padding: 50px;
     background-color: #242E4C;
+    border-radius: 10px;
     /* background-color: #171F38; */
     ;
 }
@@ -19,6 +20,7 @@ form {
 form>div {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 p {
@@ -27,7 +29,8 @@ p {
 
 span {
     font-weight: 400;
-    color: #fff;
+    color: #EEEEEE;
+    margin-left: 5px;
 }
 
 section {
@@ -52,6 +55,28 @@ input {
 }
 
 input:focus {
+    outline: 1px solid #F775C1;
+}
+
+select{
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 1px solid #171F38;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #ffffff;
+}
+textarea{
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 1px solid #171F38;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #ffffff;
+}
+textarea:focus {
     outline: 1px solid #F775C1;
 }
 

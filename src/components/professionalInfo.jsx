@@ -6,6 +6,7 @@ const ProfessionalInfo = ({ professionalData, visibility, onClose }) => {
     const onSubmit = (event) => {
         event.preventDefault();
         professionalData(formdata);
+        onClose();
     }
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -56,8 +57,10 @@ const ProfessionalInfo = ({ professionalData, visibility, onClose }) => {
                         onChange={handleChange}
                     />
                 </section>
-                <button type='submit'>Submit</button>
-                <button type='reset' onClick={onClose}>Close</button>
+                <div>
+                    <button type='submit'>Submit</button>
+                    <button type='reset' onClick={onClose}>Close</button>
+                </div>
             </form>
         </div>
     )
